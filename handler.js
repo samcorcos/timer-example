@@ -1,6 +1,7 @@
 const fetch = require('node-fetch')
 
 module.exports.hello = async (event, context) => {
+  const postUrl = 'https://<your endpoint for your server that gets all messages, processes them, and fires off the emails>.com'
   try {
     const result = await fetch(postUrl, {
       method: 'POST',
