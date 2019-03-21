@@ -8,7 +8,7 @@ module.exports.hello = async (event, context) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ ...message })
+      body: JSON.stringify({})
     })
     console.info(result)
   } catch (err) {
