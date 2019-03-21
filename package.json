@@ -1,0 +1,27 @@
+{
+  "name": "timer-example",
+  "version": "1.0.0",
+  "description": "This shows you how to set up a simple cloudwatch timer to do run cron jobs.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/.bin/serverless offline --port 3100",
+    "deploy": "node_modules/.bin/serverless deploy -v -s dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samcorcos/timer-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samcorcos/timer-example/issues"
+  },
+  "homepage": "https://github.com/samcorcos/timer-example#readme",
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "serverless": "^1.39.1",
+    "serverless-offline": "^4.9.2"
+  }
+}

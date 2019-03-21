@@ -1,0 +1,23 @@
+service: timer-example # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+plugins:
+  - serverless-offline
+
+functions:
+  hello:
+    handler: handler.hello
+    events: 
+      # this runs the event every 12 hours. you can also set this to run at 
+      # a certain time of day (see docs)
+      # https://serverless.com/framework/docs/providers/aws/events/schedule/
+      - schedule: rate(12 hours)
+      # This part is not necessary, but it makes local testing easier because
+      # you can trigger it via postman at the /trigger-timer endpoint
+      - http:
+          method: POST
+          path: trigger-timer
+          cors: true
